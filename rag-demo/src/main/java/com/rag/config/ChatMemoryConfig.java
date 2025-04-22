@@ -11,6 +11,11 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class ChatMemoryConfig {
+
+    /** 对话记忆存储于内存，因此关闭程序后会丢失，若考虑持久化可以采用jdbc等其他方式
+    * @return ChatMemory
+    * @author ggstudy11
+    */
     @Bean
     public ChatMemory InMemoryChatMemory() {
         return new InMemoryChatMemory();

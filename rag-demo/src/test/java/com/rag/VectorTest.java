@@ -20,8 +20,11 @@ public class VectorTest {
     @Autowired
     VectorStore vectorStore;
 
+    /** redis vectorStore测试
+    * @author ggstudy11
+    */
     @Test
-    public void test() {
+    public void vectorTest() {
         String pdfPath = "classpath:data/果香水果店欢迎您.pdf";
         PagePdfDocumentReader pdfReader = new PagePdfDocumentReader(pdfPath,
                 PdfDocumentReaderConfig.builder()

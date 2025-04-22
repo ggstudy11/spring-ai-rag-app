@@ -23,8 +23,11 @@ public class AITest {
     private ChatClient chatClient;
 
 
+    /** test for memory 对话记忆测试
+    * @author ggstudy11
+    */
     @Test
-    public void test() {
+    public void memoryTest() {
         String resp = chatClient.prompt()
                 .advisors(spec -> spec.param(CHAT_MEMORY_CONVERSATION_ID_KEY, 1)
                         .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 10))
@@ -41,8 +44,11 @@ public class AITest {
         System.out.println(resp);
     }
 
+    /** rag测试
+    * @author ggstudy11
+    */
     @Test
-    public void test2() {
+    public void ragTest() {
         String resp = chatClient.prompt()
                 .advisors(spec -> spec.param(CHAT_MEMORY_CONVERSATION_ID_KEY, 1)
                         .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 10))
